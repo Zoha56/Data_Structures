@@ -44,4 +44,27 @@ This lab helped me deeply understand how arrays work beneath the surface.
 It improved my problem-solving skills, strengthened my C++ fundamentals,  
 and prepared me for more advanced data structures in future labs.
 Writing the Polynomial class for the first time pushed me to think logically, break problems into smaller parts, and understand how mathematical structures can be represented in code.
+### LAB 03 🧠:
+
+### **Task 1 — Palindrome Checker**
+- Removed spaces, punctuation, and converted string to lowercase.
+- Pushed characters onto a stack and formed a reversed string by popping.
+- Compared cleaned string with its reversed form to check palindrome.
+
+### **Task 2 — Checking aⁿbⁿ Pattern**
+- Pushed all `a` characters into a stack.
+- After encountering the first `b`, ensured no more `a`s appear.
+- Popped one element for each `b`.
+- String is valid only if the stack becomes empty at the end.
+
+### **Task 3 — Expression Validation**
+- Scanned the expression and pushed all opening brackets onto a stack.
+- For each closing bracket, matched it with the top of the stack.
+- Expression is correct only if the stack is empty after scanning.
+
+### **Task 4 — Adding Large Numbers**
+- Took two numbers as C-strings and pushed digits onto two stacks.
+- Popped digits, added with carry, and pushed results onto a result stack.
+- Displayed the final sum by popping from the result stack.
+
 It strengthened my confidence and prepared me for more complex labs that followed.
