@@ -66,5 +66,33 @@ Writing the Polynomial class for the first time pushed me to think logically, br
 - Took two numbers as C-strings and pushed digits onto two stacks.
 - Popped digits, added with carry, and pushed results onto a result stack.
 - Displayed the final sum by popping from the result stack.
+# 📘 Lab 4 – My Approach
+
+## 🧭 Task 1 – Maze Solver
+- Used **recursive backtracking** to find a path from `P` to `T`.
+- Skipped walls `*` and visited cells.
+- Explored in four directions (up, down, left, right).
+- Printed full path if `T` is reached; otherwise reported unsolved.
+
+## 🔁 Task 2 – Reverse Words Using Stack
+- Traversed the string and pushed characters of each word into a stack.
+- On encountering a space, popped characters to reverse the word.
+- Maintained the original word order.
+
+## 🔄 Task 3 – Circular Queue
+- Implemented circular queue using front, rear, capacity, and modulo indexing.
+- Completed `enQueue`, `deQueue`, `isFull`, `isEmpty`, `getFront`, `getRear`.
+- Tested using the provided driver program.
+
+## 🎟️ Task 4 – Ticket Buying Simulation
+- Simulated people buying tickets one per second.
+- Used a queue to rotate people until the `k`th person finished.
+- Counted total time required.
+
+## 🖥️ Bonus – Round Robin Scheduler
+- Created `Process` class and used a circular queue to store processes.
+- Executed each process for a time quantum.
+- Reduced execution time or removed it when completed.
+- Continued until all processes finished.
 
 It strengthened my confidence and prepared me for more complex labs that followed.
