@@ -95,4 +95,19 @@ Writing the Polynomial class for the first time pushed me to think logically, br
 - Reduced execution time or removed it when completed.
 - Continued until all processes finished.
 
+# 🧪 Lab 05
+
+## 🔧 Approach
+- Used recursion to convert decimal to octal by repeatedly dividing by 8.
+- Validated digit strings recursively by checking even indices for even digits and odd indices for prime digits.
+- Solved the staircase problem using a Fibonacci-style recursive formula.
+- Determined how many nested squares contain a point using recursive size reduction.
+
+## 🎯 Learning Outcomes
+- Understood how to design and apply recursive functions.
+- Learned to break problems into smaller subproblems.
+- Gained experience with number conversion, string validation, and mathematical recursion.
+- Improved logical thinking, problem-solving, and recursive algorithm design.
+
+
 It strengthened my confidence and prepared me for more complex labs that followed.
