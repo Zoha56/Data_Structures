@@ -108,6 +108,18 @@ Writing the Polynomial class for the first time pushed me to think logically, br
 - Learned to break problems into smaller subproblems.
 - Gained experience with number conversion, string validation, and mathematical recursion.
 - Improved logical thinking, problem-solving, and recursive algorithm design.
+# STACK & QUEUE ⏳
+## Approach
+- Implemented **Stack** and **Queue** using **static arrays**.
+- Used `top` pointer for Stack and `front/rear` pointers for Queue.
+- Added core operations: `push`, `pop`, `peek`, `isEmpty`, `isFull`.
+- Ensured boundary checks to avoid overflow and underflow.
+
+## Learning Outcomes
+- Understood how linear data structures work internally using arrays.
+- Learned pointer/index manipulation for efficient operations.
+- Practiced implementing ADTs without using STL.
+- Improved understanding of memory layout and fixed-size limitations.
 
 
 It strengthened my confidence and prepared me for more complex labs that followed.
