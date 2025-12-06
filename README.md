@@ -123,3 +123,18 @@ Writing the Polynomial class for the first time pushed me to think logically, br
 
 
 It strengthened my confidence and prepared me for more complex labs that followed.
+
+# Postfix evaluation using stack ➡️
+## Approach
+- Implemented helper functions to identify operands, operators, and brackets.
+- Used an array-based Stack to convert an infix expression into postfix using precedence rules.
+- Managed operator precedence and bracket handling through stack operations.
+- Evaluated the postfix expression by pushing operands and applying operations via stack popping.
+
+## Learning Outcomes
+- Understood how Stacks enable expression conversion and evaluation.
+- Learned operator precedence handling and bracket resolution in infix expressions.
+- Gained experience with stack-based algorithms and array implementation.
+- Strengthened understanding of expression parsing and postfix evaluation.
+
+
