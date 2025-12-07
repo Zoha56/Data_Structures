@@ -136,5 +136,17 @@ It strengthened my confidence and prepared me for more complex labs that followe
 - Learned operator precedence handling and bracket resolution in infix expressions.
 - Gained experience with stack-based algorithms and array implementation.
 - Strengthened understanding of expression parsing and postfix evaluation.
+# Prefix Evaluation using stack ⏮️
+## Approach
+- Implemented helper functions to detect operands, operators, and brackets.
+- Converted infix to postfix using operator precedence and stack operations.
+- Converted infix to prefix by reversing the expression, swapping brackets, converting to postfix, then reversing the result.
+- Evaluated prefix expressions by scanning from right to left, using a stack to compute intermediate results.
+
+## Learning Outcomes
+- Understood stack-based parsing for expression conversion (infix → postfix → prefix).
+- Practiced handling operator precedence, associativity, and bracket rules.
+- Gained experience with stack operations using an array-implemented Stack class.
+- Improved understanding of prefix evaluation and expression processing algorithms.
 
 
