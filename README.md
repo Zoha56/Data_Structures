@@ -148,5 +148,27 @@ It strengthened my confidence and prepared me for more complex labs that followe
 - Practiced handling operator precedence, associativity, and bracket rules.
 - Gained experience with stack operations using an array-implemented Stack class.
 - Improved understanding of prefix evaluation and expression processing algorithms.
+# HOME TASK 01 ⚓
+## Arrays in Data Structures
+## Topic
+Arrays are sequential collections of elements of the **same data type**, stored in consecutive memory locations. Each element is accessed using its **index**. Arrays can be **1-D, 2-D, or N-Dimensional** and are a fundamental structured data type.
+
+## Approach
+- **1-D Arrays:**  
+  Address of `A[i] = Base + i × Size of element`.
+- **2-D Arrays:**  
+  - **Row-major:** `A[i][j] = Base + (i × n + j) × Size`  
+  - **Column-major:** `A[i][j] = Base + (j × m + i) × Size`
+- **N-D Arrays:**  
+  Address of `A[k1][k2]...[kn] = Base + Σ (ki × product of sizes of later dimensions)`
+- **Accessing Elements:**  
+  Use **subscript `[]`** or **pointer notation**.
+  
+## Learning Outcomes
+- Understand arrays and their memory representation.  
+- Declare, initialize, and access array elements.  
+- Compute addresses for 1-D, 2-D, and N-D arrays.  
+- Differentiate row-major and column-major storage.  
+- Apply arrays in programming for structured data storage.
 
 
