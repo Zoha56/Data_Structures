@@ -171,4 +171,19 @@ Arrays are sequential collections of elements of the **same data type**, stored 
 - Differentiate row-major and column-major storage.  
 - Apply arrays in programming for structured data storage.
 
+# Home Task 02-Sparse Matrix 🧭
+## Approach
+- Designed a `Matrix` class with data members for rows, columns, and 2D storage, including `operator[][]` overloading.
+- Implemented a `SparseMatrix` class using composition, storing only non-zero values along with their row and column indices.
+- Read matrix data from text files and constructed two dense `Matrix` objects (with ≥85% zeros).
+- Converted each dense matrix into its corresponding `SparseMatrix` by scanning and storing non-zero entries.
+- Implemented Sparse Matrix addition by matching index positions and producing a new resulting SparseMatrix.
+- Displayed the original matrices, their sparse forms, and the final sum.
+
+## Learning Outcomes
+- Understood the concept of composition and how one class can use another internally.
+- Learned how to convert a dense matrix into a space-efficient sparse representation.
+- Practiced operator overloading (`[][]`) and file-based data initialization.
+- Implemented Sparse Matrix addition and improved understanding of matrix operations.
+- Strengthened skills in class design, data abstraction, and optimized data storage.
 
