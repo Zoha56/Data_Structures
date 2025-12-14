@@ -186,4 +186,21 @@ Arrays are sequential collections of elements of the **same data type**, stored 
 - Practiced operator overloading (`[][]`) and file-based data initialization.
 - Implemented Sparse Matrix addition and improved understanding of matrix operations.
 - Strengthened skills in class design, data abstraction, and optimized data storage.
+- 
+# Home Task 03 - Stack
+## Approach
+- Used an array-based Stack to validate balanced brackets by pushing opening symbols and matching them with closing symbols.
+- Implemented string pattern checks using stack logic for:
+  - `aⁿbⁿ` language
+  - `aˢbᵗ` structure
+  - `aⁿbⁿcⁿ` pattern
+- Applied stack operations to track symbol order and count.
+- Used conditional checks to detect invalid patterns and unmatched symbols.
+
+## Learning Outcomes
+- Understood how stacks are used for syntax validation and language recognition.
+- Learned how to check balanced parentheses and nested structures.
+- Gained experience implementing formal language patterns using stacks.
+- Improved logical thinking and stack-based problem-solving skills.
+- Strengthened understanding of LIFO behavior in practical applications.
 
