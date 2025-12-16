@@ -132,7 +132,7 @@ private:
         }
         return 1 + counthelper(p->left) + counthelper(p->right);
     }
-   /* T kthsmallesthelper(Node<T>* p, int n,int &count)
+    T kthsmallesthelper(Node<T>* p, int n,int &count)
     {
         if (p == nullptr)
             return -1;
@@ -188,7 +188,7 @@ private:
             return false;
 
         return true;
-    }*/
+    }
     bool recSearch_helper(Node<T>* curr, int key)
     {
         if (curr == nullptr)
@@ -281,7 +281,7 @@ public:
     {
         cout << "Total nodes are: " << counthelper(root) << endl;
     }
-   /* void kthsmallest(int k)
+   void kthsmallest(int k)
     {
         int count = 0;
         cout << k << " smallest element is: " << kthsmallesthelper(root, k, count) << endl;
@@ -300,7 +300,7 @@ public:
     {
         int height = 0;
         isbalancehelper(root);
-    }*/
+    }
     bool recSearch(int key)
     {
         return recSearch_helper(root, key);
@@ -309,11 +309,6 @@ public:
     {
         duplicate_helper(root);
     }
-   /* void construct_from_traversals(int in_order[], int pre_order[], int si)
-    { 
-        int k = 0;
-        construct_helper(in_order, pre_order, k, si, root);
-    }*/
     void createBalanceTree(T arr[], int k, int n)
     {
         if (k > n)
@@ -415,25 +410,3 @@ int main() {
     return 0;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
-//if (k > si)
-//{
-//    return;
-//}
-//n = new Node<T>(preorder[k]);
-//int mid = (k + (si - 1)) / 2;
-//if (n->data == inorder[mid])
-//return mid;
-//else if (n->data > preorder[mid])
-//construct_helper(inorder, preorder, k, mid - 1, n->left);
-//else
-//construct_helper(inorder, preorder, mid + 1, si, n->right);
