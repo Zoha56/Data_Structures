@@ -204,3 +204,15 @@ Arrays are sequential collections of elements of the **same data type**, stored 
 - Improved logical thinking and stack-based problem-solving skills.
 - Strengthened understanding of LIFO behavior in practical applications.
 
+# BST-Binary Search Tree 🌳
+## Approach
+- Implemented a Binary Search Tree (BST) using templates and dynamic nodes.
+- Used recursion for insertion, deletion, searching, and tree traversals.
+- Applied queue-based level order traversal.
+- Built a balanced BST from a sorted array.
+
+## Learning Outcomes
+- Understood BST structure and properties.
+- Gained hands-on experience with recursion in trees.
+- Learned traversal techniques and tree-based operations.
+- Improved skills in dynamic memory and data structures.
