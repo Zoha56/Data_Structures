@@ -204,7 +204,25 @@ Arrays are sequential collections of elements of the **same data type**, stored 
 - Improved logical thinking and stack-based problem-solving skills.
 - Strengthened understanding of LIFO behavior in practical applications.
 
-# BST-Binary Search Tree 🌳
+# Binary Tree 🌳
+
+## Approach
+- Implemented a Binary Tree using **array representation** based on tree height.
+- Used index formulas (`2i+1`, `2i+2`) to access left and right children.
+- Maintained a status array to track active nodes.
+- Implemented recursive traversals: pre-order, in-order, and post-order.
+- Added utilities for ancestor, descendant, level-wise display, and tree height.
+- Used recursive helpers for deletion, height calculation, and parenthesized view.
+
+## Learning Outcomes
+- Understood array-based representation of binary trees.
+- Learned how tree relationships are mapped using index arithmetic.
+- Practiced recursion for traversal and tree analysis.
+- Gained experience implementing tree operations without pointers.
+- Improved understanding of hierarchical data structures and traversal logic.
+
+
+# BST-Binary Search Tree 🌴
 ## Approach
 - Implemented a Binary Search Tree (BST) using templates and dynamic nodes.
 - Used recursion for insertion, deletion, searching, and tree traversals.
