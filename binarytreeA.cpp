@@ -229,7 +229,7 @@ public:
         data = nullptr;
         status = nullptr;
     }
-   /* T getleftchild(T node)
+    T getleftchild(T node)
     {
 
         for (int i = 0; i < pow(2, height) - 1; i++)
@@ -261,7 +261,7 @@ public:
             }
         }
 
-    }*/
+    }
     void displayAncestors(T node)
     {
         if (data[0] == node)
@@ -347,8 +347,6 @@ public:
       
        t.setrightchild(7, 2);
        t.setleftchild(2, 3);
-       /*t.setleftchild(3, 17);
-       t.setleftchild(17, 16);*/
        cout << "level order : ";
        t.displaylevelorder();
        cout << endl;
@@ -377,4 +375,5 @@ public:
       cout << endl;
       t.displayParenthesizedView();
        return 0;
+
     }
