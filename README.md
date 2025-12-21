@@ -203,6 +203,25 @@ Arrays are sequential collections of elements of the **same data type**, stored 
 - Gained experience implementing formal language patterns using stacks.
 - Improved logical thinking and stack-based problem-solving skills.
 - Strengthened understanding of LIFO behavior in practical applications.
+# Link Lists 
+## Objective
+To implement and understand different types of linked lists including Singly Linked List, Doubly Linked List, Singly Circular Linked List, and Doubly Circular Linked List, and to perform basic operations on them.
+
+## Methodology
+Each linked list was implemented using dynamic memory allocation.  
+- In **Singly Linked List**, each node stores data and a pointer to the next node.
+- In **Doubly Linked List**, nodes store pointers to both previous and next nodes.
+- In **Singly Circular Linked List**, the last node points back to the first node.
+- In **Doubly Circular Linked List**, nodes are connected circularly in both directions.
+
+Common operations such as insertion, deletion, traversal, and searching were implemented according to the structure of each list.
+
+## Results
+All linked list implementations performed correctly for insertion, deletion, and traversal. Circular linked lists maintained proper looping without null pointers, while doubly linked lists allowed bidirectional traversal.
+
+## Conclusion
+This lab enhanced understanding of dynamic data structures and pointer manipulation. It highlighted the differences between linear and circular lists, as well as the advantages of bidirectional traversal in doubly linked lists.
+
 
 # Binary Tree 🌳
 
