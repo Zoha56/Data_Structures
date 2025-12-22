@@ -123,7 +123,7 @@ private:
             return 0;
         return 1 + max(height_helper(n->left), height_helper(n->right));
     }
-   /* void displaylevel_helper(Node<T>* n, int k)
+    void displaylevel_helper(Node<T>* n, int k)
     {
         if (n == nullptr)
             return;
@@ -236,7 +236,7 @@ private:
         bool isleft = ismirror(root1->left, root2->right);
         bool isright = ismirror(root1->right, root2->left);
         return isleft && isright;
-    }*/
+    }
     void dis_helper(Node<T> *n)
     {
         if (n==nullptr)
@@ -278,7 +278,7 @@ private:
        temp->left= copymirror(n->right);
        return temp;
     }
-   /* bool isSubtree_helper(Node<T>* root1, Node<T>* root2)
+   bool isSubtree_helper(Node<T>* root1, Node<T>* root2)
     {
         if (!root1 && !root2)
         {
@@ -300,7 +300,7 @@ private:
         }
        
        
-    }*/
+    }
 public:
     BinaryTree()
     {
@@ -380,7 +380,7 @@ public:
     {
         return searchP(root, p);;
     }
-   /* void displayancstors(T c)
+    void displayancstors(T c)
     {
         if (c == root->info)
         {
@@ -391,7 +391,7 @@ public:
         cout << n->info<<" ";
         displayancstors(n->info);
         
-    }*/
+    }
     void displaydesndents(T c)
     {
         Node<T>* n = search(root, c);
@@ -471,7 +471,7 @@ public:
         }
 
     }
-  /*  void displaylevel(int k)
+    void displaylevel(int k)
     {  
         cout << "level " << k << " is: ";
         displaylevel_helper(root, k);
@@ -501,7 +501,7 @@ public:
     void isMirror(Node<T>* root2)
     {
         cout << "is trees are mirror: " << ismirror(root, root2) << endl;
-    }*/
+    }
     T findSiblings(T node)
     {
         Node<T>* temp = getparent(node);
@@ -544,8 +544,6 @@ int main() {
     bt.setrightchild(2, 5);
     bt.setleftchild(3, 6);
     bt.setrightchild(3, 7);
-   /* bt.setleftchild(7, 8);
-    bt.setrightchild(8, 9);*/
  
     bt.printpreorder();
     cout << endl;
@@ -554,19 +552,19 @@ int main() {
     bt.printpostorder(); // 4 5 2 6 7 3 1
     cout << endl;
     bt.displaylevelorder(); // 1 2 3 4 5 6 7
-   /* cout << endl;
+    cout << endl;
     cout << "Ancestors are: ";
-    bt.displayancstors(7);*/
+    bt.displayancstors(7);
     cout << endl;
     bt.displaydesndents(3);
     cout << endl;
     bt.heightofTree();
     cout << endl;
    
-    int i = bt.external(6);
-    cout << "Is external node: " << (i == 1? "yes" : "No") << endl;
-    int j = bt.internal(2);
-   cout << "Is internal node: " << (j == 1 ? "yes" : "No") << endl;
+  int i = bt.external(6);
+  cout << "Is external node: " << (i == 1? "yes" : "No") << endl;
+  int j = bt.internal(2);
+  cout << "Is internal node: " << (j == 1 ? "yes" : "No") << endl;
   int sib= bt.findSiblings(2);
   cout << "sibling of given node is: " << sib << endl;
   bt.displayParenthesizedView();
@@ -600,3 +598,4 @@ int main() {
 //   4. Use the Error List window to view errors
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
