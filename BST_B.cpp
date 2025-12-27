@@ -133,7 +133,7 @@ private:
         }
         return 1 + counthelper(p->left) + counthelper(p->right);
     }
-    /* T kthsmallesthelper(Node<T>* p, int n,int &count)
+     T kthsmallesthelper(Node<T>* p, int n,int &count)
      {
          if (p == nullptr)
              return -1;
@@ -189,7 +189,7 @@ private:
              return false;
 
          return true;
-     }*/
+     }
     bool recSearch_helper(Node<T>* curr, int key)
     {
         if (curr == nullptr)
@@ -262,13 +262,6 @@ private:
             }
         }
     }
- /*   void construct_helper(int inorder[], int preorder[], int insi, int prsi)
-    {
-        if (int insi == 0 && int prsi == 0)
-        {
-            return;
-        }
-    }*/
 
 public:
     BST() : root(nullptr) {}
@@ -323,7 +316,7 @@ public:
     {
         cout << "Total nodes are: " << counthelper(root) << endl;
     }
-    /* void kthsmallest(int k)
+     void kthsmallest(int k)
      {
          int count = 0;
          cout << k << " smallest element is: " << kthsmallesthelper(root, k, count) << endl;
@@ -342,7 +335,7 @@ public:
      {
          int height = 0;
          isbalancehelper(root);
-     }*/
+     }
     bool recSearch(int key)
     {
         return recSearch_helper(root, key);
@@ -351,11 +344,6 @@ public:
     {
         duplicate_helper(root);
     }
-    /* void construct_from_traversals(int in_order[], int pre_order[], int si)
-     {
-         int k = 0;
-         construct_helper(in_order, pre_order, k, si, root);
-     }*/
     void createBalanceTree(T arr[], int k, int n)
     {
         if (k > n)
@@ -370,46 +358,23 @@ public:
     {
         createBackBone(root);
     }
-    //void createperfecttree()
-    //{
-    //    int n = counthelper(root);
-    //    int lg = int(log2(n + 1));
-    //    int m = pow(2, lg) - 1;
-    //    int n_m = n - m;
-    //    Node<T>* temp = root;
-    //    for (int i = 0; i < n_m; i++)
-    //    {
-    //                   
-    //        root = leftRotation(temp); // rotate temp
-    //        temp = root->right;
-    //    }
-    //    while (m > 1)
-    //    {
-    //        m = m / 2;
-    //        temp = root;
-    //        for (int i = 0; i < m; i++)
-    //        {    
-    //            if (temp == nullptr || temp->right == nullptr) break;
-    //            temp->right= leftRotation(temp);
-    //            temp = temp->right->right;
-    //        }
-    //    }
-    //}
+   
+ 
     void createperfecttree() {
         if (root == nullptr)
             return;
 
-        // Step 1: Convert to backbone
+      
         createBackBone(root);
 
-        // Step 2: Count nodes
+        
         int n = counthelper(root);
 
-        // Step 3: Compute m
+       
         int  lg = float(log2(n + 1));
         int m = pow(2, lg) - 1;
 
-        // Step 4: First n-m rotations
+        
         Node<T>* temp = root;
         for (int i = 0; i < n - m; i++) {
             root = leftRotation(temp); // rotate top node
@@ -562,4 +527,5 @@ int main()
 //else if (n->data > preorder[mid])
 //construct_helper(inorder, preorder, k, mid - 1, n->left);
 //else
+
 //construct_helper(inorder, preorder, mid + 1, si, n->right);
