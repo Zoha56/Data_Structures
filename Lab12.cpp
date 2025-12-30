@@ -1,4 +1,5 @@
 #include <iostream>
+#include<vector>
 using namespace std;
 template<class T>
 class Node
@@ -156,7 +157,7 @@ private:
         return temp;
     }
     Node<T>* rightRotation(Node<T>* temp) {
-        AVLNode* temp_left = temp->left;
+        Node<T>* temp_left = temp->left;
         temp->left = temp_left->right;
         temp_left->right = temp;
         temp = temp_left;
@@ -181,6 +182,39 @@ private:
                 temp=temp->right;
             }
         }
+    }
+    void construct_from_traversals_help(Node<T>*& curr, vector<int> in_order, vector<int> pre_order)
+    {
+        if (pre_order.empty() || in_order.empty()) {
+            curr = nullptr;
+            return;
+        }
+        vector<int> P_R;
+        vector<int> P_L;
+        vector<int> I_R;
+        vector<int> I_L;
+        curr = new Node<T>(pre_order[0]);
+        int i = 0;
+        for (i = 0; i < in_order.size(); i++)
+        {
+            if (in_order[i] == pre_order[0])
+            {
+                break;
+            }
+        }
+        for (int j = 0; j < i; j++)
+        {
+            I_L.push_back(in_order[j]);
+            P_L.push_back(pre_order[j + 1]);
+        }
+        for (int j = i + 1; j < in_order.size(); j++)
+        {
+            I_R.push_back(in_order[j]);
+            P_R.push_back(pre_order[j]);
+        }
+        construct_from_traversals_help(curr->left, I_L, P_L);
+        construct_from_traversals_help(curr->right, I_R, P_R);
+
     }
 public:
     BST() : root(nullptr) {}
@@ -232,6 +266,50 @@ public:
     void convert_to_backbone()
     {
         createBackBone(root);
+    }
+   
+    void construct_from_posttraversals(Node<T>*& curr, vector<int> in_order, vector<int> post_order)
+    {
+        // 1. Base Case
+        if (post_order.empty() || in_order.empty()) {
+            curr = nullptr;
+            return;
+        }
+
+        // 2. The Root is the LAST element of post_order
+        int rootVal = post_order.back();
+        curr = new Node<T>(rootVal);
+
+        // 3. Find the root index in in_order
+        int i = 0;
+        for (i = 0; i < in_order.size(); i++) {
+            if (in_order[i] == rootVal) break;
+        }
+
+        // 4. Split vectors based on 'i' (the number of nodes in the left subtree)
+        vector<int> I_L, I_R, P_L, P_R;
+
+        // Fill In-Order Left and Right
+        for (int j = 0; j < i; j++)
+        {
+            I_L.push_back(in_order[j]);
+            P_L.push_back(post_order[j]);
+        }
+        for (int j = i + 1; j < in_order.size(); j++)
+        {
+            I_R.push_back(in_order[j]);
+        }
+        for (int j = i; j < post_order.size() - 1; j++) { // Stop before the last element (root)
+            P_R.push_back(post_order[j]);
+        }
+
+        // 5. Recursively build
+        construct_from_posttraversals(curr->left, I_L, P_L);
+        construct_from_posttraversals(curr->right, I_R, P_R);
+    }
+    void construct_from_traversals(vector<int> in_order, vector<int> pre_order)
+    {
+        construct_from_traversals_help(root, in_order, pre_order);
     }
 };
 template<class T>
@@ -308,4 +386,23 @@ template<class T>
 void BST<T>::postOrder() {
     postOrderHelper(root);
     std::cout << std::endl;
+}
+int main() {
+    BST<int> bst;
+    vector<int> in1 = { 1, 2, 3, 4, 5, 6 };
+    vector<int> pre1 = { 3, 1, 2, 5, 4, 6 };
+    bst.construct_from_traversals(in1, pre1);
+    cout << "In-order traversal (Example 1): ";
+    bst.inOrder();
+    cout << "Post-order traversal (Example 1): ";
+    bst.postOrder();
+    BST<int> bst2;
+    vector<int> in2 = { 5,10,15,25,27,30,35,40,45,50,52,55,60,65,70,75,80,85,90,100 };
+    vector<int> pre2 = { 50,25,10,5,15,40,30,27,35,45,75,60,55,52,65,70,90,80,85,100 };
+    bst2.construct_from_traversals(in2, pre2);
+    cout << "\nIn-order traversal (Example 2): ";
+    bst2.inOrder();
+    cout << "Post-order traversal (Example 2): ";
+    bst2.postOrder();
+    return 0;
 }
