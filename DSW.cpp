@@ -163,26 +163,6 @@ private:
         temp = temp_left;
         return temp;
     }
-  /*  void createBackBone(Node<T>* r)
-    {
-        Node<T>* temp = r;
-        Node<T>* par = r;
-        Node<T>* rotate = nullptr;
-        while (temp != nullptr)
-        {  
-            par = temp;
-            if (temp->left != nullptr)
-            {
-               par->right = temp->left;
-               rotate= rightRotation(temp);
-               temp = par;
-            }
-            else
-            {
-                temp=temp->right;
-            }
-        }
-    }*/
    
     void construct_from_traversals_help(Node<T>*& curr, vector<int> in_order, vector<int> pre_order)
     {
@@ -264,11 +244,7 @@ public:
         createBalanceTree(arr, mid + 1, n);
 
     }
- /*   void convert_to_backbone()
-    {
-        createBackBone(root);
-    }
-   */
+
     void construct_from_posttraversals(Node<T>*& curr, vector<int> in_order, vector<int> post_order)
     {
         // 1. Base Case
@@ -465,11 +441,10 @@ int main() {
     bst2.inOrder();
     cout << "Post-order traversal (Example 2): ";
     bst2.postOrder();
-  /*  bst.convert_to_backbone();
-    bst.preOrder();*/
     bst.createBackBone();
     bst.preOrder();
     bst.createPerfectTree();
     bst.preOrder();
     return 0;
+
 }
