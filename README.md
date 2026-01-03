@@ -253,3 +253,23 @@ This lab enhanced understanding of dynamic data structures and pointer manipulat
 - Gained hands-on experience with recursion in trees.
 - Learned traversal techniques and tree-based operations.
 - Improved skills in dynamic memory and data structures.
+
+# Graph Data Structure (Adjacency Matrix)
+
+### 🚀 Key Features
+* **Deep Copy:** Implements the **Rule of Three** (copy constructor and destructor) to manage dynamic memory safely and prevent dangling pointers.
+* **Robust Traversal:** DFS and BFS handle **disconnected components** by automatically jumping to the next minimum-numbered unvisited vertex.
+* **Cycle Detection:** Dual implementation using **Recursive DFS** and **Queue-based BFS** (with parent tracking) to identify loops in undirected graphs.
+* **Graph Metrics:** Supports degree calculation, completeness checks, and dynamic vertex/edge management.
+
+### 🛠️ Approach
+* **Representation:** Uses a 2D `int**` Adjacency Matrix for $O(1)$ edge lookups.
+* **Deterministic Order:** Neighbors are always scanned from $0$ to $n-1$, ensuring the smallest vertex index is prioritized when branching, satisfying "increasing order" requirements.
+* **Parent Tracking:** Uses a `par` variable to distinguish between a simple return path to a parent and a true back-edge cycle.
+
+
+
+### 🎓 Learning Outcomes
+* **Memory Management:** Mastery of dynamic 2D array allocation and deallocation in C++.
+* **Traversal Logic:** Proficiency in adapting BFS/DFS for "islands" within a disconnected graph.
+* **State Management:** Understanding the use of a `visited` array to ensure $O(V^2)$ efficiency and prevent infinite loops.
