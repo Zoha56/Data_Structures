@@ -273,3 +273,52 @@ This lab enhanced understanding of dynamic data structures and pointer manipulat
 * **Memory Management:** Mastery of dynamic 2D array allocation and deallocation in C++.
 * **Traversal Logic:** Proficiency in adapting BFS/DFS for "islands" within a disconnected graph.
 * **State Management:** Understanding the use of a `visited` array to ensure $O(V^2)$ efficiency and prevent infinite loops.
+
+# Graph Implementation (Adjacency List)
+
+A C++ project implementing a dynamic Undirected Graph using an **Adjacency List**. This approach optimizes memory usage by only storing existing edges, making it ideal for sparse graphs.
+
+---
+
+## 🚀 Approach
+
+The project utilizes Object-Oriented Programming (OOP) to manage graph data and traversals:
+
+* **Data Structure:** Used an array of pointers (`Node**`) where each index represents a vertex. Each vertex points to a **linked list** of neighboring nodes.
+* **Memory Management:** Implemented a custom destructor to manually deallocate linked list nodes and arrays to prevent memory leaks.
+* **Graph Traversals:**
+    * **BFS:** Utilized `std::queue` for level-order exploration.
+    * **DFS:** Implemented using recursion to explore the graph branch-by-branch.
+* **Cycle Detection:** Employed a modified DFS that tracks the "parent" of each node. If a visited node is encountered that is not the parent, a cycle is confirmed.
+* **Validation:** Added logic to check for a **Complete Graph** by verifying if every vertex is connected to every other vertex ($degree = n-1$).
+
+
+
+---
+
+## 🧠 Learning Outcomes
+
+Working on this code provided deep insights into:
+
+### 1. Advanced Pointer Manipulation
+I learned how to manage a **pointer to an array of pointers** (`Node**`). This was crucial for creating a dynamic adjacency list where each element is the head of a separate linked list.
+
+### 2. Manual Memory Deallocation
+Since the graph uses raw pointers, I practiced the "rule of three" by ensuring the destructor correctly cleans up every dynamically allocated node across the entire array.
+
+### 3. Graph Theory Fundamentals
+* **Connectivity:** Learned how to handle undirected edges by adding nodes to both source and destination lists.
+* **Cycles:** Understood why simply checking if a node is "visited" isn't enough for cycle detection in undirected graphs—you must also ensure the node isn't the parent.
+* **Efficiency:** Observed the space efficiency of $O(V + E)$ in an adjacency list compared to $O(V^2)$ in an adjacency matrix.
+
+---
+
+## 🛠️ Features Included
+| Feature | Functionality |
+| :--- | :--- |
+| **Dynamic Vertices** | Add vertices up to a maximum limit. |
+| **Edge Management** | Add or remove undirected edges between vertices. |
+| **Traversals** | Full Breadth-First Search and Depth-First Search. |
+| **Graph Analysis** | Check if the graph is "Complete" or contains "Cycles". |
+
+---
